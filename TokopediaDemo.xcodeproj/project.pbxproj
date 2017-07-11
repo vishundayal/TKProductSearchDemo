@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		841620061F1500D200ADAAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841620051F1500D200ADAAAD /* AppDelegate.swift */; };
+		841620081F1500D200ADAAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841620071F1500D200ADAAAD /* ViewController.swift */; };
+		8416200B1F1500D200ADAAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841620091F1500D200ADAAAD /* Main.storyboard */; };
+		8416200D1F1500D200ADAAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8416200C1F1500D200ADAAAD /* Assets.xcassets */; };
+		841620101F1500D200ADAAAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8416200E1F1500D200ADAAAD /* LaunchScreen.storyboard */; };
+		8416201B1F1500D200ADAAAD /* TokopediaDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8416201A1F1500D200ADAAAD /* TokopediaDemoTests.swift */; };
+		841620261F1500D300ADAAAD /* TokopediaDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841620251F1500D300ADAAAD /* TokopediaDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		841620171F1500D200ADAAAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84161FFA1F1500D200ADAAAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841620011F1500D200ADAAAD;
+			remoteInfo = TokopediaDemo;
+		};
+		841620221F1500D200ADAAAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84161FFA1F1500D200ADAAAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841620011F1500D200ADAAAD;
+			remoteInfo = TokopediaDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		841620021F1500D200ADAAAD /* TokopediaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokopediaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		841620051F1500D200ADAAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		841620071F1500D200ADAAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8416200A1F1500D200ADAAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8416200C1F1500D200ADAAAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8416200F1F1500D200ADAAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		841620111F1500D200ADAAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841620161F1500D200ADAAAD /* TokopediaDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokopediaDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8416201A1F1500D200ADAAAD /* TokopediaDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokopediaDemoTests.swift; sourceTree = "<group>"; };
+		8416201C1F1500D200ADAAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841620211F1500D200ADAAAD /* TokopediaDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokopediaDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		841620251F1500D300ADAAAD /* TokopediaDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokopediaDemoUITests.swift; sourceTree = "<group>"; };
+		841620271F1500D300ADAAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84161FFF1F1500D200ADAAAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841620131F1500D200ADAAAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8416201E1F1500D200ADAAAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84161FF91F1500D200ADAAAD = {
+			isa = PBXGroup;
+			children = (
+				841620041F1500D200ADAAAD /* TokopediaDemo */,
+				841620191F1500D200ADAAAD /* TokopediaDemoTests */,
+				841620241F1500D200ADAAAD /* TokopediaDemoUITests */,
+				841620031F1500D200ADAAAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		841620031F1500D200ADAAAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				841620021F1500D200ADAAAD /* TokopediaDemo.app */,
+				841620161F1500D200ADAAAD /* TokopediaDemoTests.xctest */,
+				841620211F1500D200ADAAAD /* TokopediaDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		841620041F1500D200ADAAAD /* TokopediaDemo */ = {
+			isa = PBXGroup;
+			children = (
+				841620051F1500D200ADAAAD /* AppDelegate.swift */,
+				841620071F1500D200ADAAAD /* ViewController.swift */,
+				841620091F1500D200ADAAAD /* Main.storyboard */,
+				8416200C1F1500D200ADAAAD /* Assets.xcassets */,
+				8416200E1F1500D200ADAAAD /* LaunchScreen.storyboard */,
+				841620111F1500D200ADAAAD /* Info.plist */,
+			);
+			path = TokopediaDemo;
+			sourceTree = "<group>";
+		};
+		841620191F1500D200ADAAAD /* TokopediaDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8416201A1F1500D200ADAAAD /* TokopediaDemoTests.swift */,
+				8416201C1F1500D200ADAAAD /* Info.plist */,
+			);
+			path = TokopediaDemoTests;
+			sourceTree = "<group>";
+		};
+		841620241F1500D200ADAAAD /* TokopediaDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				841620251F1500D300ADAAAD /* TokopediaDemoUITests.swift */,
+				841620271F1500D300ADAAAD /* Info.plist */,
+			);
+			path = TokopediaDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		841620011F1500D200ADAAAD /* TokopediaDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8416202A1F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemo" */;
+			buildPhases = (
+				84161FFE1F1500D200ADAAAD /* Sources */,
+				84161FFF1F1500D200ADAAAD /* Frameworks */,
+				841620001F1500D200ADAAAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TokopediaDemo;
+			productName = TokopediaDemo;
+			productReference = 841620021F1500D200ADAAAD /* TokopediaDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841620151F1500D200ADAAAD /* TokopediaDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8416202D1F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemoTests" */;
+			buildPhases = (
+				841620121F1500D200ADAAAD /* Sources */,
+				841620131F1500D200ADAAAD /* Frameworks */,
+				841620141F1500D200ADAAAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841620181F1500D200ADAAAD /* PBXTargetDependency */,
+			);
+			name = TokopediaDemoTests;
+			productName = TokopediaDemoTests;
+			productReference = 841620161F1500D200ADAAAD /* TokopediaDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		841620201F1500D200ADAAAD /* TokopediaDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841620301F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemoUITests" */;
+			buildPhases = (
+				8416201D1F1500D200ADAAAD /* Sources */,
+				8416201E1F1500D200ADAAAD /* Frameworks */,
+				8416201F1F1500D200ADAAAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841620231F1500D200ADAAAD /* PBXTargetDependency */,
+			);
+			name = TokopediaDemoUITests;
+			productName = TokopediaDemoUITests;
+			productReference = 841620211F1500D200ADAAAD /* TokopediaDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84161FFA1F1500D200ADAAAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Tokopedia;
+				TargetAttributes = {
+					841620011F1500D200ADAAAD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2BUF3G8WJB;
+						ProvisioningStyle = Automatic;
+					};
+					841620151F1500D200ADAAAD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2BUF3G8WJB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 841620011F1500D200ADAAAD;
+					};
+					841620201F1500D200ADAAAD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 2BUF3G8WJB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 841620011F1500D200ADAAAD;
+					};
+				};
+			};
+			buildConfigurationList = 84161FFD1F1500D200ADAAAD /* Build configuration list for PBXProject "TokopediaDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84161FF91F1500D200ADAAAD;
+			productRefGroup = 841620031F1500D200ADAAAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				841620011F1500D200ADAAAD /* TokopediaDemo */,
+				841620151F1500D200ADAAAD /* TokopediaDemoTests */,
+				841620201F1500D200ADAAAD /* TokopediaDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		841620001F1500D200ADAAAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841620101F1500D200ADAAAD /* LaunchScreen.storyboard in Resources */,
+				8416200D1F1500D200ADAAAD /* Assets.xcassets in Resources */,
+				8416200B1F1500D200ADAAAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841620141F1500D200ADAAAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8416201F1F1500D200ADAAAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84161FFE1F1500D200ADAAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841620081F1500D200ADAAAD /* ViewController.swift in Sources */,
+				841620061F1500D200ADAAAD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841620121F1500D200ADAAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8416201B1F1500D200ADAAAD /* TokopediaDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8416201D1F1500D200ADAAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841620261F1500D300ADAAAD /* TokopediaDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		841620181F1500D200ADAAAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841620011F1500D200ADAAAD /* TokopediaDemo */;
+			targetProxy = 841620171F1500D200ADAAAD /* PBXContainerItemProxy */;
+		};
+		841620231F1500D200ADAAAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841620011F1500D200ADAAAD /* TokopediaDemo */;
+			targetProxy = 841620221F1500D200ADAAAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		841620091F1500D200ADAAAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8416200A1F1500D200ADAAAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8416200E1F1500D200ADAAAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8416200F1F1500D200ADAAAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		841620281F1500D300ADAAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		841620291F1500D300ADAAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8416202B1F1500D300ADAAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8416202C1F1500D300ADAAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8416202E1F1500D300ADAAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokopediaDemo.app/TokopediaDemo";
+			};
+			name = Debug;
+		};
+		8416202F1F1500D300ADAAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TokopediaDemo.app/TokopediaDemo";
+			};
+			name = Release;
+		};
+		841620311F1500D300ADAAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TokopediaDemo;
+			};
+			name = Debug;
+		};
+		841620321F1500D300ADAAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				INFOPLIST_FILE = TokopediaDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TokopediaDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84161FFD1F1500D200ADAAAD /* Build configuration list for PBXProject "TokopediaDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841620281F1500D300ADAAAD /* Debug */,
+				841620291F1500D300ADAAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8416202A1F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8416202B1F1500D300ADAAAD /* Debug */,
+				8416202C1F1500D300ADAAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8416202D1F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8416202E1F1500D300ADAAAD /* Debug */,
+				8416202F1F1500D300ADAAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		841620301F1500D300ADAAAD /* Build configuration list for PBXNativeTarget "TokopediaDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841620311F1500D300ADAAAD /* Debug */,
+				841620321F1500D300ADAAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84161FFA1F1500D200ADAAAD /* Project object */;
+}
