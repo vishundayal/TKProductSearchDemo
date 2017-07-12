@@ -3,7 +3,7 @@
 //  TokopediaDemoTests
 //
 //  Created by Vishun Dayal on 11/07/17.
-//  Copyright © 2017 Tokopedia. All rights reserved.
+//  Copyright © 2017 Vishun. All rights reserved.
 //
 
 import XCTest
