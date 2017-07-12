@@ -9,7 +9,7 @@
 import Foundation
 
 class ProductFilter {
-    var minPrice: Int = 0
+    var minPrice: Int = 10000
     var maxPrice: Int = 10000000
     var isWholeSale = false
     var shopTypes: [String] = []
