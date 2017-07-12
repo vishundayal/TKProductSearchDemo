@@ -1,0 +1,15 @@
+PODS:
+  - MARKRangeSlider (1.1.1)
+  - Toast-Swift (2.0.0)
+
+DEPENDENCIES:
+  - MARKRangeSlider
+  - Toast-Swift (~> 2.0.0)
+
+SPEC CHECKSUMS:
+  MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
+
+PODFILE CHECKSUM: 1bad413fb175660cc55ea98fe9923099657d2d80
+
+COCOAPODS: 1.2.0
