@@ -23,10 +23,8 @@ class ProductListCollectionViewController: UICollectionViewController {
         super.viewDidLayoutSubviews()
     }
     
-//    MARK:- Private
-    
-    // MARK: UICollectionViewDataSource
 
+    // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.productList.count
     }
@@ -36,5 +34,12 @@ class ProductListCollectionViewController: UICollectionViewController {
         let product = self.productList[indexPath.item]
         cell.configureProduct(product: product)
         return cell
+    }
+    
+    // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row > self.productList.count - 5 {
+            (self.parent as! ProductsListViewController).loadNexPage()
+        }
     }
 }

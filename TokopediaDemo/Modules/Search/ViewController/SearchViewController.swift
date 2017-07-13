@@ -32,6 +32,7 @@ class SearchViewController: UIViewController {
             return
         }
         self.productDataBuilder.searchText = self.textField.text
+        self.productDataBuilder.prepareForFreshLoad()
         self.productDataBuilder.loadProducts { (error:Error?) in
             if error == nil {
                 DispatchQueue.main.async {

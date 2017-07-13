@@ -19,6 +19,16 @@ class ShopTypeCollectionViewController: UICollectionViewController,UICollectionV
         self.shopTypes = ShopTypeDataManager().loadData()
     }
 
+    func prepareShopTypesList(selectedShopTypeKeys:[String]) {
+        self.shopTypes.removeAll()
+        let allTypes = ShopTypeDataManager().loadData()
+        for item in allTypes {
+            if selectedShopTypeKeys.contains(item.shopTypeKey) {
+                self.shopTypes.append(item)
+            }
+        }
+        self.collectionView?.reloadData()
+    }
     func cellSizeForText(text:String) -> CGSize {
         let font = UIFont.systemFont(ofSize: 14)
         let stringAttributes = [NSFontAttributeName: font]

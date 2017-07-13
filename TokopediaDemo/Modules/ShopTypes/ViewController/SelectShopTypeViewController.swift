@@ -10,7 +10,8 @@ import UIKit
 
 class SelectShopTypeViewController: UIViewController {
 
-    weak var tableViewController: ShopTypesTableViewController!
+    var tableViewController: ShopTypesTableViewController!
+    var applyButtonHandler: ((_ shopTypes:[String])->Void)?
     var selectedShopTypes: [String] = []
     
     override func viewDidLoad() {
@@ -34,10 +35,14 @@ class SelectShopTypeViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(sender:UIBarButtonItem) {
-//        self.productFilter = ProductFilter()
+        self.tableViewController.selectedShopTypes.removeAll()
+        self.tableViewController.tableView.reloadData()
     }
     
     @IBAction func applyButtonTapped(sender:UIButton) {
-        
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        if self.applyButtonHandler != nil {
+            self.applyButtonHandler!(self.tableViewController.selectedShopTypes)
+        }
     }
 }

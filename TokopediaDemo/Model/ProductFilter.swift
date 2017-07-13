@@ -14,6 +14,13 @@ class ProductFilter {
     var isWholeSale = false
     var shopTypes: [String] = []
     
+    init() {
+        let allTypes = ShopTypeDataManager().loadData()
+        for item in allTypes {
+            self.shopTypes.append(item.shopTypeKey)
+        }
+    }
+    
     func isWholeSaleStringValue()->String {
         return (self.isWholeSale == true) ? "true" : "false"
     }
@@ -27,5 +34,14 @@ class ProductFilter {
         let formatter = TPNumberFormatter().currencyFormatter(fractionLength: 0)
         return formatter.string(from: NSNumber(value:self.maxPrice))!
     }
-
+    
+    func copy() -> ProductFilter {
+        let newObject = ProductFilter()
+        newObject.minPrice = self.minPrice
+        newObject.maxPrice = self.maxPrice
+        newObject.isWholeSale = self.isWholeSale
+        newObject.shopTypes = []
+        newObject.shopTypes.append(contentsOf: self.shopTypes)
+        return newObject
+    }
 }

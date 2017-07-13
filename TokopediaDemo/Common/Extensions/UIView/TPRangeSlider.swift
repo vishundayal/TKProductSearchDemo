@@ -19,5 +19,10 @@ extension MARKRangeSlider {
     func maximumPrice()->Int {
         return MIN_Price + Int(CGFloat(MAX_Price-MIN_Price) * self.rightValue)
     }
-
+    
+    func setThumbPositions(leftPrice:Int, rightPrice:Int) {
+        let leftValue = CGFloat(leftPrice-MIN_Price)/CGFloat(MAX_Price-MIN_Price)
+        let rightValue = CGFloat(rightPrice-MIN_Price)/CGFloat(MAX_Price-MIN_Price)
+        self.setLeftValue(leftValue, rightValue: rightValue)
+    }
 }

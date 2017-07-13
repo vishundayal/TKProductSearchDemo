@@ -14,9 +14,9 @@ class ProductFilterTableViewController: UITableViewController {
     @IBOutlet weak var maxPriceLabel: UILabel!
     @IBOutlet weak var minPriceLabel: UILabel!
     @IBOutlet weak var priceRangeSlider: MARKRangeSlider!
-    
-    weak var productFilter: ProductFilter!
-
+    @IBOutlet weak var wholeSaleSwitch: UISwitch!
+    var productFilter: ProductFilter!
+    weak var shopTypeViewController: ShopTypeCollectionViewController?
     
 //    MARK:- lifecycle
     override func viewDidLoad() {
@@ -31,21 +31,39 @@ class ProductFilterTableViewController: UITableViewController {
     
     func setupUI() {
         self.priceRangeSlider.minimumDistance = 0.05
-    }
+        self.getReferenceOfShopTypeCollectionViewController()
+     }
+    
     func refreshData() {
         self.setPriceLabelValues()
+        self.shopTypeViewController?.prepareShopTypesList(selectedShopTypeKeys: self.productFilter.shopTypes)
+        self.shopTypeViewController?.collectionView?.reloadData()
+        self.wholeSaleSwitch.isOn = self.productFilter.isWholeSale
     }
     
     func setPriceLabelValues() {
         self.minPriceLabel.text = self.productFilter.minPriceStringValue()
         self.maxPriceLabel.text = self.productFilter.maxPriceStringValue()
+        self.priceRangeSlider.setThumbPositions(leftPrice: self.productFilter.minPrice, rightPrice: self.productFilter.maxPrice)
     }
     
     func showShopTypesList() {
         let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "SelectShopTypeNavigationController") as! UINavigationController
         let viewController = navigationController.viewControllers.first as! SelectShopTypeViewController
-        viewController.selectedShopTypes.append(contentsOf: self.productFilter.shopTypes)
+        viewController.selectedShopTypes = self.productFilter.shopTypes
+        viewController.applyButtonHandler = { (shopTypes: [String])->Void in
+            self.productFilter.shopTypes = shopTypes
+            self.refreshData()
+        }
         self.parent?.present(navigationController, animated: true, completion: nil)
+    }
+    
+    func getReferenceOfShopTypeCollectionViewController() {
+        for item in self.childViewControllers {
+            if item is ShopTypeCollectionViewController {
+                self.shopTypeViewController = item as? ShopTypeCollectionViewController
+            }
+        }
     }
     
 //    MARK:- Actions

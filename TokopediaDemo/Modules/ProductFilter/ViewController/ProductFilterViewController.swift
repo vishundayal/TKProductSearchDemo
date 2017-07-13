@@ -10,9 +10,10 @@ import UIKit
 
 class ProductFilterViewController: UIViewController {
 
-    weak var productFilter: ProductFilter!
+    var productFilter: ProductFilter!
     weak var tableViewController: ProductFilterTableViewController!
-    
+    var applyButtonHandler: ((_ filter:ProductFilter)->Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableViewController()
@@ -26,6 +27,7 @@ class ProductFilterViewController: UIViewController {
             }
         }
         self.tableViewController.productFilter = self.productFilter
+        self.tableViewController.shopTypeViewController?.prepareShopTypesList(selectedShopTypeKeys: self.productFilter.shopTypes)
     }
 
 //    MARK:- Actions
@@ -35,5 +37,14 @@ class ProductFilterViewController: UIViewController {
 
     @IBAction func resetButtonTapped(sender:UIBarButtonItem) {
         self.productFilter = ProductFilter()
+        self.tableViewController.productFilter = self.productFilter
+        self.tableViewController.refreshData()
+    }
+    
+    @IBAction func applyButtonTapped(sender:UIButton) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        if self.applyButtonHandler != nil {
+            self.applyButtonHandler!(self.productFilter)
+        }
     }
 }
