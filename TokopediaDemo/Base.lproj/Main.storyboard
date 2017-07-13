@@ -289,14 +289,14 @@
         <scene sceneID="cjQ-X5-xhk">
             <objects>
                 <tableViewController id="E2l-Dy-F07" customClass="ProductFilterTableViewController" customModule="TokopediaDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="15" sectionFooterHeight="1" id="6fV-bT-sdi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="15" sectionFooterHeight="1" id="6fV-bT-sdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="uAe-cs-oMO">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterPriceTableViewCell" rowHeight="200" id="yhC-3Z-CAc" customClass="FilterPriceTableViewCell" customModule="TokopediaDemo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterPriceTableViewCell" rowHeight="200" id="yhC-3Z-CAc" customClass="FilterPriceTableViewCell" customModule="TokopediaDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhC-3Z-CAc" id="jkG-Pc-qKl">
@@ -426,11 +426,11 @@
                             </tableViewSection>
                             <tableViewSection id="7vs-ON-vIK">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShopTypesTableViewCell" rowHeight="100" id="9Qg-H6-BqD" customClass="ShopTypesTableViewCell" customModule="TokopediaDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="251" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShopTypesTableViewCell" rowHeight="110" id="9Qg-H6-BqD" customClass="ShopTypesTableViewCell" customModule="TokopediaDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="251" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Qg-H6-BqD" id="8GV-Sj-er1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6t-oq-JlE">
@@ -445,9 +445,8 @@
                                                             <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-yY-i5T">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-yY-i5T">
                                                             <rect key="frame" x="339" y="0.0" width="20" height="50"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="20" id="nTY-8o-w3J"/>
                                                                 <constraint firstAttribute="height" constant="50" id="y5i-dJ-l9L"/>
@@ -501,28 +500,70 @@
             </objects>
             <point key="canvasLocation" x="3829.5999999999999" y="146.17691154422789"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Shop Type Collection View Controller-->
         <scene sceneID="FUg-yN-wxF">
             <objects>
-                <collectionViewController id="8hn-rZ-WQ5" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="SoX-tu-SOW">
+                <collectionViewController id="8hn-rZ-WQ5" customClass="ShopTypeCollectionViewController" customModule="TokopediaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="SoX-tu-SOW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ybR-rn-qYq">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="ybR-rn-qYq">
+                            <size key="itemSize" width="150" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ic6-sd-jvy">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopTypeCollectionViewCell" id="Ic6-sd-jvy" customClass="ShopTypeCollectionViewCell" customModule="TokopediaDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9Z-eJ-1Ol">
+                                            <rect key="frame" x="10" y="5" width="140" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvS-j4-tc4">
+                                                    <rect key="frame" x="10" y="10" width="35.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6IK-oh-bFs"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0k-cb-659">
+                                                    <rect key="frame" x="102" y="1" width="38" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="o0k-cb-659" secondAttribute="height" multiplier="1:1" id="t1F-TV-Yyw"/>
+                                                    </constraints>
+                                                    <state key="normal" image="close_circular-button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="o0k-cb-659" secondAttribute="bottom" constant="1" id="2HL-pI-rMO"/>
+                                                <constraint firstAttribute="trailing" secondItem="o0k-cb-659" secondAttribute="trailing" id="67V-nb-DXo"/>
+                                                <constraint firstItem="gvS-j4-tc4" firstAttribute="leading" secondItem="I9Z-eJ-1Ol" secondAttribute="leading" constant="10" id="OEV-yh-F6z"/>
+                                                <constraint firstItem="o0k-cb-659" firstAttribute="top" secondItem="I9Z-eJ-1Ol" secondAttribute="top" constant="1" id="RGF-4J-Hkm"/>
+                                                <constraint firstItem="gvS-j4-tc4" firstAttribute="centerY" secondItem="I9Z-eJ-1Ol" secondAttribute="centerY" id="eSc-PE-a7G"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="I9Z-eJ-1Ol" firstAttribute="leading" secondItem="Ic6-sd-jvy" secondAttribute="leading" constant="10" id="H6Z-dn-oVR"/>
+                                    <constraint firstItem="I9Z-eJ-1Ol" firstAttribute="top" secondItem="Ic6-sd-jvy" secondAttribute="top" constant="5" id="RzY-Jg-QKi"/>
+                                    <constraint firstAttribute="bottom" secondItem="I9Z-eJ-1Ol" secondAttribute="bottom" constant="5" id="gse-g4-nfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="I9Z-eJ-1Ol" secondAttribute="trailing" id="kTb-j6-pwZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="borderView" destination="I9Z-eJ-1Ol" id="GW9-Ei-arY"/>
+                                    <outlet property="removeButton" destination="o0k-cb-659" id="wUS-d5-Pwv"/>
+                                    <outlet property="textLabel" destination="gvS-j4-tc4" id="EgO-lj-IYL"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -533,7 +574,127 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1x5-Ws-UI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4588" y="146"/>
+            <point key="canvasLocation" x="4588" y="145.72713643178412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6wf-17-wBB">
+            <objects>
+                <navigationController storyboardIdentifier="SelectShopTypeNavigationController" id="PKV-fK-Jn2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="63r-FX-Wwe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2gu-U4-KuS" kind="relationship" relationship="rootViewController" id="Mvt-7Q-3bb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fd9-qx-HcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5282" y="169"/>
+        </scene>
+        <!--Shop Type-->
+        <scene sceneID="S5Z-4w-5dv">
+            <objects>
+                <viewController id="2gu-U4-KuS" customClass="SelectShopTypeViewController" customModule="TokopediaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TvN-p6-DkY"/>
+                        <viewControllerLayoutGuide type="bottom" id="dlh-bo-tg8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VCw-Xb-hHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-gQ-gpP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <connections>
+                                    <segue destination="0UX-LV-7N8" kind="embed" id="2RY-Xr-Cmo"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgZ-Gv-Of9">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mtf-RA-DeN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyButtonTappedWithSender:" destination="2gu-U4-KuS" eventType="touchUpInside" id="plU-tQ-L4L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZgZ-Gv-Of9" secondAttribute="trailing" id="EwH-iM-ZEk"/>
+                            <constraint firstItem="jnZ-gQ-gpP" firstAttribute="top" secondItem="VCw-Xb-hHQ" secondAttribute="top" id="a15-C3-nO9"/>
+                            <constraint firstItem="ZgZ-Gv-Of9" firstAttribute="leading" secondItem="VCw-Xb-hHQ" secondAttribute="leading" id="hvX-7p-RNy"/>
+                            <constraint firstItem="ZgZ-Gv-Of9" firstAttribute="top" secondItem="jnZ-gQ-gpP" secondAttribute="bottom" id="lXs-Ho-kXQ"/>
+                            <constraint firstItem="dlh-bo-tg8" firstAttribute="top" secondItem="ZgZ-Gv-Of9" secondAttribute="bottom" id="qEL-VW-cPM"/>
+                            <constraint firstItem="jnZ-gQ-gpP" firstAttribute="leading" secondItem="VCw-Xb-hHQ" secondAttribute="leading" id="uEb-Zg-zTr"/>
+                            <constraint firstAttribute="trailing" secondItem="jnZ-gQ-gpP" secondAttribute="trailing" id="yhL-zK-Fhk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shop Type" id="AC1-FK-REN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="T7u-r1-gXe">
+                            <connections>
+                                <action selector="cancelButtonTappedWithSender:" destination="2gu-U4-KuS" id="6GU-6u-xq1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="9yd-z8-a7c">
+                            <color key="tintColor" red="0.0" green="0.74117647060000003" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="resetButtonTappedWithSender:" destination="2gu-U4-KuS" id="dY7-SD-BSF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34A-XH-37k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6004" y="169"/>
+        </scene>
+        <!--Shop Types Table View Controller-->
+        <scene sceneID="Ij6-dO-Xl3">
+            <objects>
+                <tableViewController id="0UX-LV-7N8" customClass="ShopTypesTableViewController" customModule="TokopediaDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="daW-S0-xqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="L0q-bk-q2R" style="IBUITableViewCellStyleDefault" id="pKn-pZ-cgA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pKn-pZ-cgA" id="9EZ-0p-baU">
+                                    <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L0q-bk-q2R">
+                                            <rect key="frame" x="15" y="0.0" width="321" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" red="0.0" green="0.74117647060000003" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0UX-LV-7N8" id="SRt-Dx-G2I"/>
+                            <outlet property="delegate" destination="0UX-LV-7N8" id="uNd-Kh-g4k"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZB-my-I4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6709" y="166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close_circular-button" width="128" height="128"/>
+        <image name="right_arrow" width="64" height="64"/>
+    </resources>
 </document>

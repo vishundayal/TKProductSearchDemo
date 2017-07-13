@@ -27,7 +27,7 @@ class ProductSearchBuilder {
         if self.filter.shopTypes.contains("official") == true {
             params["official"] = "true"
         }
-        if self.filter.shopTypes.contains("official") == true {
+        if self.filter.shopTypes.contains("fshop") == true {
             params["fshop"] = "2"
         }
         params["start"] = String(format: "%d", self.startPage)

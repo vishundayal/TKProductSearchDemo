@@ -40,6 +40,14 @@ class ProductFilterTableViewController: UITableViewController {
         self.minPriceLabel.text = self.productFilter.minPriceStringValue()
         self.maxPriceLabel.text = self.productFilter.maxPriceStringValue()
     }
+    
+    func showShopTypesList() {
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "SelectShopTypeNavigationController") as! UINavigationController
+        let viewController = navigationController.viewControllers.first as! SelectShopTypeViewController
+        viewController.selectedShopTypes.append(contentsOf: self.productFilter.shopTypes)
+        self.parent?.present(navigationController, animated: true, completion: nil)
+    }
+    
 //    MARK:- Actions
     @IBAction func wholeSaleValueChanged(_ sender: UISwitch) {
         self.productFilter.isWholeSale = sender.isOn
@@ -49,5 +57,11 @@ class ProductFilterTableViewController: UITableViewController {
         self.productFilter.minPrice = self.priceRangeSlider.minimumPrice()
         self.productFilter.maxPrice = self.priceRangeSlider.maximumPrice()
         self.setPriceLabelValues()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            self.showShopTypesList()
+        }
     }
 }
