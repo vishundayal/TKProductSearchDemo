@@ -14,7 +14,7 @@ class TPNumberFormatter {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.maximumFractionDigits = fractionLength
-        numberFormatter.locale = Locale(identifier: "id")
+        numberFormatter.locale = Locale(identifier: "id-ID")
         return numberFormatter
     }
 }

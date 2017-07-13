@@ -33,6 +33,8 @@
 		845BB0B71F16496A00F236CA /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BB0B61F16496A00F236CA /* ProductFilterViewController.swift */; };
 		845BB0B91F165B4D00F236CA /* ProductListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BB0B81F165B4D00F236CA /* ProductListCollectionViewController.swift */; };
 		845BB0BC1F165BD500F236CA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BB0BA1F165BD500F236CA /* ProductCollectionViewCell.swift */; };
+		84D786231F16E128003A6C25 /* TPRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D786221F16E128003A6C25 /* TPRangeSlider.swift */; };
+		84D786251F16F229003A6C25 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D786241F16F229003A6C25 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,9 @@
 		845BB0B61F16496A00F236CA /* ProductFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
 		845BB0B81F165B4D00F236CA /* ProductListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewController.swift; sourceTree = "<group>"; };
 		845BB0BA1F165BD500F236CA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		84D7861A1F16D130003A6C25 /* TokopediaDemo_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokopediaDemo_Bridging_Header.h; sourceTree = "<group>"; };
+		84D786221F16E128003A6C25 /* TPRangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPRangeSlider.swift; sourceTree = "<group>"; };
+		84D786241F16F229003A6C25 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		B5E67FF05BCE7A6EE30AD0C2 /* Pods-TokopediaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokopediaDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokopediaDemo/Pods-TokopediaDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F80F5B0523C20346AF02C408 /* Pods_TokopediaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokopediaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,10 +168,8 @@
 				841620461F1509EA00ADAAAD /* Common */,
 				841620361F15031A00ADAAAD /* Modules */,
 				841620331F15013600ADAAAD /* AppDelegate */,
-				841620091F1500D200ADAAAD /* Main.storyboard */,
-				8416200C1F1500D200ADAAAD /* Assets.xcassets */,
-				8416200E1F1500D200ADAAAD /* LaunchScreen.storyboard */,
-				841620111F1500D200ADAAAD /* Info.plist */,
+				84D786201F16D5C2003A6C25 /* Storyboard */,
+				84D7861F1F16D5B1003A6C25 /* OtherResources */,
 			);
 			path = TokopediaDemo;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 		841620371F15031A00ADAAAD /* ProductFilter */ = {
 			isa = PBXGroup;
 			children = (
+				84D786211F16E093003A6C25 /* Views */,
 				841620381F15031A00ADAAAD /* Cells */,
 				841620391F15031A00ADAAAD /* ViewController */,
 			);
@@ -340,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				841620541F15453A00ADAAAD /* WebServiceConstants.swift */,
+				84D786241F16F229003A6C25 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -385,6 +390,33 @@
 				845BB0B41F16317F00F236CA /* TPNumberFormatter.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		84D7861F1F16D5B1003A6C25 /* OtherResources */ = {
+			isa = PBXGroup;
+			children = (
+				8416200C1F1500D200ADAAAD /* Assets.xcassets */,
+				8416200E1F1500D200ADAAAD /* LaunchScreen.storyboard */,
+				841620111F1500D200ADAAAD /* Info.plist */,
+				84D7861A1F16D130003A6C25 /* TokopediaDemo_Bridging_Header.h */,
+			);
+			name = OtherResources;
+			sourceTree = "<group>";
+		};
+		84D786201F16D5C2003A6C25 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				841620091F1500D200ADAAAD /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		84D786211F16E093003A6C25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D786221F16E128003A6C25 /* TPRangeSlider.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,12 +612,14 @@
 				841620671F15717200ADAAAD /* ProductFilter.swift in Sources */,
 				845BB0BC1F165BD500F236CA /* ProductCollectionViewCell.swift in Sources */,
 				841620631F156F1800ADAAAD /* WebServicesBase.swift in Sources */,
+				84D786251F16F229003A6C25 /* AppConstants.swift in Sources */,
 				841620351F15013600ADAAAD /* AppDelegate.swift in Sources */,
 				8416205A1F15633C00ADAAAD /* Product.swift in Sources */,
 				845BB0B91F165B4D00F236CA /* ProductListCollectionViewController.swift in Sources */,
 				841620621F156F1800ADAAAD /* ProductSearchService.swift in Sources */,
 				8416204D1F1509EA00ADAAAD /* UITableView+UnusedLines.swift in Sources */,
 				845B23161F16A89F00D88E40 /* ShopTypesTableViewCell.swift in Sources */,
+				84D786231F16E128003A6C25 /* TPRangeSlider.swift in Sources */,
 				841620551F15453A00ADAAAD /* WebServiceConstants.swift in Sources */,
 				845BB0B71F16496A00F236CA /* ProductFilterViewController.swift in Sources */,
 				845BB0B51F16317F00F236CA /* TPNumberFormatter.swift in Sources */,
@@ -748,10 +782,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TokopediaDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TokopediaDemo/TokopediaDemo_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -762,10 +798,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2BUF3G8WJB;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TokopediaDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tokopedia.TokopediaDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TokopediaDemo/TokopediaDemo_Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

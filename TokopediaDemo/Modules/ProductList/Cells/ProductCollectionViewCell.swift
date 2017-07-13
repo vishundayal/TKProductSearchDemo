@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductCollectionViewCell: UICollectionViewCell {
 
@@ -14,8 +15,14 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    override func prepareForReuse() {
+        self.imageView.sd_cancelCurrentImageLoad()
+    }
     func configureProduct(product:Product) {
-        self.imageView.image = UIImage(named: product.image_uri!)
+        if product.image_uri != nil {
+            let imageUrl = URL(string: product.image_uri!)
+            self.imageView.sd_setImage(with: imageUrl)
+        }
         self.nameLabel.text = product.name
         self.priceLabel.text = product.price
     }

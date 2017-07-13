@@ -19,7 +19,7 @@ class ProductsListViewController: UIViewController {
     }
     
 //    MARK:- Private
-    func setupCollectionViewController() {
+    private func setupCollectionViewController() {
         for item in self.childViewControllers {
             if item is ProductListCollectionViewController {
                 self.collectionViewController = item as! ProductListCollectionViewController
@@ -31,7 +31,9 @@ class ProductsListViewController: UIViewController {
 //    MARK:- Actions
     
     @IBAction func filterButtonTapped(sender:UIButton) {
-        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductFilterNavigationController")
-        self.present(navigationController!, animated: true, completion: nil)
+        let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "ProductFilterNavigationController") as! UINavigationController
+        let viewController = navigationController.viewControllers.first as! ProductFilterViewController
+        viewController.productFilter = self.productDataBuilder.filter
+        self.present(navigationController, animated: true, completion: nil)
     }
 }

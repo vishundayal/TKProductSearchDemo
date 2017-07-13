@@ -7,5 +7,6 @@ target 'TokopediaDemo' do
 
 pod 'Toast-Swift', '~> 2.0.0'
 pod 'MARKRangeSlider'
+pod 'SDWebImage', '~> 3.8.2'
 
 end
