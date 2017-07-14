@@ -3,7 +3,7 @@
 //  TokopediaDemo
 //
 //  Created by Vishun Dayal on 12/07/17.
-//  Copyright © 2017 Tokopedia. All rights reserved.
+//  Copyright © 2017 Vishun. All rights reserved.
 //
 
 import UIKit
@@ -62,6 +62,12 @@ class ProductFilterTableViewController: UITableViewController {
         for item in self.childViewControllers {
             if item is ShopTypeCollectionViewController {
                 self.shopTypeViewController = item as? ShopTypeCollectionViewController
+                self.shopTypeViewController?.shopTypeRemoveHandler = { (tag:String)->Void in
+                    let index = self.productFilter.shopTypes.index(of: tag)
+                    if index != nil {
+                        self.productFilter.shopTypes.remove(at: index!)
+                    }
+                }
             }
         }
     }

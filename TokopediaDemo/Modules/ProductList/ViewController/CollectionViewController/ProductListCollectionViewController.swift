@@ -3,14 +3,14 @@
 //  TokopediaDemo
 //
 //  Created by Vishun Dayal on 12/07/17.
-//  Copyright © 2017 Tokopedia. All rights reserved.
+//  Copyright © 2017 Vishun. All rights reserved.
 //
 
 import UIKit
 
 private let reuseIdentifier = "ProductCollectionViewCell"
 
-class ProductListCollectionViewController: UICollectionViewController {
+class ProductListCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
 
     var productList:[Product] = []
     
@@ -41,5 +41,14 @@ class ProductListCollectionViewController: UICollectionViewController {
         if indexPath.row > self.productList.count - 5 {
             (self.parent as! ProductsListViewController).loadNexPage()
         }
+    }
+//    MARK:- UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.view.bounds.size.width
+        var cellWidth = floor(width/2)
+        if cellWidth*2 > width-1 {
+            cellWidth -= 1
+        }
+        return CGSize(width: cellWidth, height: 260)
     }
 }

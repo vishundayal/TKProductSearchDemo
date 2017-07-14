@@ -3,7 +3,7 @@
 //  TokopediaDemo
 //
 //  Created by Vishun Dayal on 13/07/17.
-//  Copyright © 2017 Tokopedia. All rights reserved.
+//  Copyright © 2017 Vishun. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,8 @@ private let reuseIdentifier = "ShopTypeCollectionViewCell"
 class ShopTypeCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
 
     var shopTypes: [ShopType] = []
-    
+    var shopTypeRemoveHandler: ((_ tag:String)->Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shopTypes = ShopTypeDataManager().loadData()
@@ -29,6 +30,7 @@ class ShopTypeCollectionViewController: UICollectionViewController,UICollectionV
         }
         self.collectionView?.reloadData()
     }
+//    MARK:- Private
     func cellSizeForText(text:String) -> CGSize {
         let font = UIFont.systemFont(ofSize: 14)
         let stringAttributes = [NSFontAttributeName: font]
@@ -42,7 +44,15 @@ class ShopTypeCollectionViewController: UICollectionViewController,UICollectionV
         size.height = buttonHeight
         return size
     }
-    
+//    MARK:- Action
+    func removeButtonTapped(sender:UIButton) {
+        let type = self.shopTypes[sender.tag]
+        if self.shopTypeRemoveHandler != nil {
+            self.shopTypeRemoveHandler!(type.shopTypeKey)
+        }
+        self.shopTypes.remove(at: sender.tag)
+        self.collectionView?.reloadData()
+    }
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,6 +61,8 @@ class ShopTypeCollectionViewController: UICollectionViewController,UICollectionV
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ShopTypeCollectionViewCell
+        cell.removeButton.tag = indexPath.item
+        cell.removeButton.addTarget(self, action: #selector(ShopTypeCollectionViewController.removeButtonTapped), for: .touchUpInside)
         let type = self.shopTypes[indexPath.item]
         cell.textLabel.text = type.displayText
         return cell
