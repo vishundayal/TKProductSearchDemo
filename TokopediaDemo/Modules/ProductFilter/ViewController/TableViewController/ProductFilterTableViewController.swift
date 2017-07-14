@@ -28,7 +28,7 @@ class ProductFilterTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.refreshData()
     }
-    
+//    MARK:- Accessaries
     func setupUI() {
         self.priceRangeSlider.minimumDistance = 0.05
         self.getReferenceOfShopTypeCollectionViewController()

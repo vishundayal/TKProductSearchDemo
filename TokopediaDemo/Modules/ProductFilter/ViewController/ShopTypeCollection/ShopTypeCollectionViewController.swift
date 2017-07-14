@@ -15,11 +15,12 @@ class ShopTypeCollectionViewController: UICollectionViewController,UICollectionV
     var shopTypes: [ShopType] = []
     var shopTypeRemoveHandler: ((_ tag:String)->Void)?
 
+//    MARK:- lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shopTypes = ShopTypeDataManager().loadData()
     }
-
+//MARK:- Public
     func prepareShopTypesList(selectedShopTypeKeys:[String]) {
         self.shopTypes.removeAll()
         let allTypes = ShopTypeDataManager().loadData()

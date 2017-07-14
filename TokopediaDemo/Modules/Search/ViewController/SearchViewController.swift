@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SearchViewController: UIViewController {
 
@@ -21,30 +22,32 @@ class SearchViewController: UIViewController {
     }
     
 //    MARK:- Private
-    func setupUI() {
+    private func setupUI() {
         self.textField.roundedCorner(radius: 7.0)
         self.searchButton.roundedCorner(radius: 7.0)
     }
     
+    private func showProductsList() {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductsListViewController") as! ProductsListViewController
+        viewController.productDataBuilder = self.productDataBuilder
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
 //    MARK:- Actions
     @IBAction func searchButtonTapped(sender:UIButton) {
-        if self.textField.text == nil {
+        if self.textField.text == nil || self.textField.text?.isEmpty == true {
             return
         }
         self.productDataBuilder.searchText = self.textField.text
         self.productDataBuilder.prepareForFreshLoad()
+        self.view.makeToastActivity(.center)
         self.productDataBuilder.loadProducts { (error:Error?) in
             if error == nil {
                 DispatchQueue.main.async {
+                    self.view.hideToastActivity()
                     self.showProductsList()
                 }
             }
         }
-    }
-    
-    func showProductsList() {
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductsListViewController") as! ProductsListViewController
-        viewController.productDataBuilder = self.productDataBuilder
-        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

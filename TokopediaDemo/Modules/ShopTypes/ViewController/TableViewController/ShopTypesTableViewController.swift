@@ -13,6 +13,7 @@ class ShopTypesTableViewController: UITableViewController {
     var allShopTypes: [ShopType] = []
     var selectedShopTypes: [String] = []
     
+//    MARK:- lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.allShopTypes = ShopTypeDataManager().loadData()
@@ -36,6 +37,7 @@ class ShopTypesTableViewController: UITableViewController {
         }
         return cell
     }
+//    MARK:- Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         let type = self.allShopTypes[indexPath.row]

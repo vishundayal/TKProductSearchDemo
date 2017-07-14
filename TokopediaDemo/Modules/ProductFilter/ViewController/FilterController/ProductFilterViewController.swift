@@ -14,6 +14,7 @@ class ProductFilterViewController: UIViewController {
     weak var tableViewController: ProductFilterTableViewController!
     var applyButtonHandler: ((_ filter:ProductFilter)->Void)?
 
+//    MARK:- lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableViewController()

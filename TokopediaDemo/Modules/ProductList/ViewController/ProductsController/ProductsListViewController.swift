@@ -14,14 +14,14 @@ class ProductsListViewController: UIViewController {
     var productDataBuilder: ProductSearchBuilder!
     weak var collectionViewController: ProductListCollectionViewController!
     var isLoadingPage = false
-    
+//    MARK:- lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollectionViewController()
     }
-    
+//    MARK:- Services
     func loadNexPage() {
-        if self.isLoadingPage == true {
+        if self.isLoadingPage == true || self.productDataBuilder.isNoMoreProductToLoad == true {
             return
         }
         self.isLoadingPage = true

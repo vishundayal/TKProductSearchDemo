@@ -14,6 +14,7 @@ class SelectShopTypeViewController: UIViewController {
     var applyButtonHandler: ((_ shopTypes:[String])->Void)?
     var selectedShopTypes: [String] = []
     
+//    MARK:- lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableViewController()

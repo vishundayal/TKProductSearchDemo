@@ -14,10 +14,11 @@ class ProductSearchBuilder {
     var filter: ProductFilter = ProductFilter()
     var startPage = -1
     let pageSize = 10
+    var isNoMoreProductToLoad = false
     var productsList: [Product] = []
     
     func loadProducts(completionHandler: @escaping(_ error: Error?) -> Swift.Void) {
-        if self.searchText == nil {
+        if self.searchText == nil || self.isNoMoreProductToLoad == true {
             return
         }
         var params: [String:String] = ["q":self.searchText!]
@@ -50,6 +51,10 @@ class ProductSearchBuilder {
     
     func getProducts(response:[String:Any]) {
         let data = response["data"] as! [[String:Any]]
+        if data.count == 0 {
+            self.isNoMoreProductToLoad = true
+            return
+        }
         var list: [Product] = []
         for p in data {
             let product = Product(dict: p)
@@ -61,5 +66,6 @@ class ProductSearchBuilder {
     func prepareForFreshLoad() {
         self.startPage = -1
         self.productsList.removeAll()
+        self.isNoMoreProductToLoad = false
     }
 }
